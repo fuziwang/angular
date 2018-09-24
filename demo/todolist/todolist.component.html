@@ -1,0 +1,28 @@
+<header>
+    <section>
+        <div class="left">ToDoList</div>
+        <div class="right">
+            <input type="text" [(ngModel)]="value" (keydown)="key($event)" placeholder="添加ToDo" />
+        </div>
+    </section>
+</header>
+<section>
+    <h3>正在进行<span>{{count}}</span></h3>
+    <ng-container *ngFor="let jtem of runningArr;let j = index;">
+        <li *ngIf="!jtem.done">
+            <input type="checkbox" (click)="change(j)" />{{jtem.title}}
+            <button (click)="runningDel(j)">delete</button>
+        </li>
+    </ng-container>
+    <h3>已经完成<span>{{runningArr.length - count}}</span></h3>
+    <ng-container *ngFor="let item of runningArr;let i = index;">
+        <li *ngIf="item.done">
+            <input type="checkbox" (click)="change(i)" checked />{{item.title}}
+            <button (click)="runningDel(i)">delete</button>
+        </li>
+    </ng-container>
+</section>
+<footer>
+    Copyright © 2014 todolist.cn
+    <a href="#" (click)="clear()">clear</a>
+</footer>
