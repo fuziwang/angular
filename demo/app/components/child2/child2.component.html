@@ -1,0 +1,14 @@
+<h3>正在进行<span>{{count}}</span></h3>
+<ng-container *ngFor="let item of arr;let i = index;">
+    <li *ngIf="!item.done">
+        <input type="checkbox" (click)="change($event,i)" />{{item.title}}
+        <button (click)="del($event)">delete</button>
+    </li>
+</ng-container>
+<h3>已经完成<span>{{arr.length - count}}</span></h3>
+<ng-container *ngFor="let item of arr;let i = index;">
+    <li *ngIf="item.done">
+        <input type="checkbox" (click)="change($event,i)" checked />{{item.title}}
+        <button (click)="del($event)">delete</button>
+    </li>
+</ng-container>
