@@ -1,0 +1,71 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    width: 972px;
+    overflow: hidden;
+    margin: 100px auto;
+    border: 1px solid red;
+}
+
+#pic {
+    width: 4860px;
+    transition: all 2s;
+}
+
+#pic img {
+    width: 972px;
+    height: 321px;
+    float: left;
+}
+
+#tab {
+    position: absolute;
+    left: 44%;
+    top: 61%;
+}
+
+#tab li {
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin: 8px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#tab li.on {
+    background-color: red;
+}
+
+#btn p {
+    width: 40px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 30px;
+    background: red;
+    color: #ccc;
+    position: absolute;
+    top: 36%;
+}
+
+#btn p:hover {
+    background: #333;
+}
+
+#btn .btn-left {
+    left: 197px;
+}
+
+#btn .btn-right {
+    right: 197px;
+}

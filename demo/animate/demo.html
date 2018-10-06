@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>animate</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        #box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <script src="animate.js"></script>
+    <script>
+        var box = document.querySelector('#box');
+        box.onclick = function() {
+            animate(box, {
+                left: 500,
+                top: 300,
+                opacity: 30
+            }, () => {
+                console.log(1);
+            });
+            // var timer = setInterval(() => {
+            //     var now = parseInt(getStyle(box, 'left'));
+            //     var speed = (500 - now) / 6;
+            //     speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+            //     if (now == 500) {
+            //         clearInterval(timer);
+            //     } else {
+            //         box.style.left = now + speed + 'px';
+            //     }
+            // }, 30);
+        }
+
+        // function getStyle(obj, attr) {
+        //     if (obj.currentStyle) {
+        //         return obj.currentStyle[attr];
+        //     } else {
+        //         return getComputedStyle(obj, null)[attr];
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
