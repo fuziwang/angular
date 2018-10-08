@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>百度搜索</title>
+</head>
+
+<body>
+    <input type="text" id="inp" />
+    <ul id="list">
+
+    </ul>
+    <!--跨域的方法 jsonp cors postMessage webScoket-->
+    <script>
+        // $.ajax({
+        //     url: '',
+        //     data: {},
+        //     success: () => {}
+        // })
+        let ul = document.querySelector('#list'),
+            inp = document.querySelector('#inp');
+        // 绑定事件
+        inp.addEventListener('input', function() {
+            jsonp({
+                url: 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',
+                data: {wd: this.value},
+                cb: 'fn'
+            }).then((d) => {
+                ul.innerHTML = '';
+                d.s.length && d.s.forEach((ele) => {
+                    ul.innerHTML += `<li>${ele}</li>`;
+                });
+            })
+        }, false);
+
+        function jsonp({url,data,cb}) {
+            return new Promise((resolve,reject)=>{
+                let script = document.createElement('script'),
+                    arr = [];
+                window[cb] = function (d) {
+                    resolve(d);
+                };
+                data = {...data,cb};
+                Object.keys(data).forEach((key)=>{
+                    arr.push(`${key}=${data[key]}`);
+                })
+                script.src = `${url}?${arr.join('&')}`;
+                document.body.appendChild(script);
+            });
+        }
+    </script>
+    <!-- <script src="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=a&cb=fn"></script> -->
+</body>
+
+</html>

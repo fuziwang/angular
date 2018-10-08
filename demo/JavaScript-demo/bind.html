@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>双向数据绑定</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <input type="text" value="" l-model="msg">
+            <input type="text" value="" l-model="name">
+        </div>
+        <input type="text" l-model="age"> {{name}} {{age}}
+        <div>
+            <h3>{{msg}}:{{name}}</h3>
+        </div>
+        <h3>{{name}}</h3>
+        {{age}}
+    </div>
+
+    <script>
+        //{{name}} {{age}}
+        var msg = 'hello',
+            age = 23,
+            name = 'frewen';
+        let reg = /\{\{([^}]*)\}\}/g; //匹配大括号{{}}
+        let obj = {
+            name: new Viewmodel('frewen'),
+            age: new Viewmodel(30)
+        }
+
+        // name:{value:'frewen',nodelist:[input,{{}}]}
+        function Viewmodel(data) {
+            this.value = data;
+            this.nodelist = [];
+        }
+        Viewmodel.prototype.bindNode = function(node) {
+            this.nodelist.push(node);
+        }
+        Viewmodel.prototype.update = function() {
+            this.nodelist.forEach((node) => {
+                if (node.nodeType == 1) {
+                    node.value = this.value;
+                } else {
+                    node.textContent = node.yuan.replace(reg, function() { // 一定要改变
+                        return obj[arguments[1]].value; // 分别找到name和age的value
+                    });
+                }
+            })
+        }
+        Viewmodel.prototype.setValue = function(value) {
+            this.value = value;
+            this.update();
+        }
+
+        function bind(e) {
+            let ele = document.querySelector(e);
+            // 创建文档碎片
+            let fragment = document.createDocumentFragment();
+            // console.log(document.nodeType);
+            // 文档碎片中缓存节点
+            let child = null;
+            while (child = ele.firstChild) {
+                fragment.appendChild(ele.firstChild)
+            }
+            // Array.from().forEach()
+            // 遍历节点
+            function search(fragment) {
+                [...fragment.childNodes].forEach(node => {
+                    if (node.nodeType == 1) { //如果是元素节点
+                        [...node.attributes].forEach(attr => { //遍历节点属性，判断是否含有l-model
+                            let {
+                                name,
+                                value
+                            } = attr; //attr是属性节点，是节点就是个对象，有狠多属性，拿name和value属性
+                            if (name.includes('l-model')) {
+                                obj[value] = new Viewmodel(window[value]);
+                                obj[value].bindNode(node); // 找到元素节点，把所对应的内容加到对应的对象Viewmodel上
+                                node.addEventListener('input', () => {
+                                    obj[value].setValue(node.value);
+                                }, false)
+                            }
+                        });
+                    }
+                    if (node.childNodes.length) {
+                        search(node);
+                    }
+                    if (node.nodeType == 3 && reg.test(node.textContent)) {
+                        node.textContent.replace(reg, function() {
+                            //console.log(arguments);
+                            node.yuan = node.textContent;
+                            obj[arguments[1]].bindNode(node);
+                        });
+                    }
+                })
+            }
+            search(fragment);
+            Object.keys(obj).forEach((key) => {
+                obj[key].update();
+            })
+            ele.appendChild(fragment);
+        }
+        bind('#app');
+    </script>
+</body>
+
+</html>
