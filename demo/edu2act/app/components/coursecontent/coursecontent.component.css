@@ -1,0 +1,66 @@
+.body {
+    background-color: rgb(250, 251, 252);
+}
+
+.container {
+    width: 1020px;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+
+.map {
+    margin-top: 52px;
+}
+
+.content h3 {
+    color: #666;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.content h3 a {
+    color: rgb(255, 110, 61);
+}
+
+.audio {
+    margin-top: 20px;
+    width: 1004px;
+    height: 457px;
+    border: 0.5px solid #333;
+    border-radius: 3px;
+}
+
+video {
+    margin-top: -10px;
+    margin-left: 10px;
+    width: 730px;
+    height: 456px;
+    float: left;
+}
+
+.audio div {
+    background-color: #333;
+    width: 250px;
+    height: 440px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+}
+
+.audio h4 {
+    font-size: 18px;
+    color: #ccc;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.audio li {
+    list-style: none;
+    margin-top: 20px;
+    color: #ccc;
+    font-size: 16px;
+    margin-left: 40px;
+    cursor: pointer;
+}

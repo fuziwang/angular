@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="map"></div>
+    <div class="content">
+        <div class="img">
+            <img src="{{course?.images}}">
+        </div>
+        <div class="author">
+            <h3>{{course?.title}}</h3>
+            <div class="person">
+                <img src="{{course?.img}}">
+                <span class="name">{{course?.author}}</span>
+                <span class="time">发布于：{{course?.time}}</span>
+                <span class="read">阅读量：{{course?.read}}</span>
+            </div>
+        </div>
+        <article>{{course.info}}</article>
+    </div>
+</div>
+<app-footer></app-footer>

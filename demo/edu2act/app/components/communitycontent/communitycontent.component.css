@@ -1,0 +1,63 @@
+.container {
+    width: 710px;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+
+.map {
+    margin-top: 52px;
+}
+
+.content .img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content img {
+    width: 700px;
+    height: 280px;
+}
+
+.author h3 {
+    font-size: 25px;
+    line-height: 1.5em;
+}
+
+.person {
+    margin-top: 15px;
+}
+
+.person img {
+    width: 36px;
+    height: 36px;
+    border-radius: 20px;
+    float: left;
+}
+
+.person span {
+    color: #666;
+    font-size: 14px;
+}
+
+.name {
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.time {
+    float: left;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.read {
+    float: right;
+    margin-top: 5px;
+}
+
+article {
+    display: block;
+    clear: both;
+    margin-top: 60px;
+}

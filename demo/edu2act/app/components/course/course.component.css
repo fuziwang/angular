@@ -1,0 +1,73 @@
+.container {
+    width: 1020px;
+    margin: 0px auto;
+    padding-top: 5px;
+}
+
+.map {
+    margin-top: 60px;
+}
+
+.container li {
+    margin-left: 12px;
+    border: 0.5px solid #ccc;
+    border-radius: 2px;
+    width: 241px;
+    height: 270px;
+    float: left;
+    margin-top: 15px;
+}
+
+.container li:hover {
+    border: 0.5px solid #999;
+}
+
+.container li h3 {
+    position: relative;
+    left: 6px;
+    height: 54px;
+    color: #333;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+h3 span {
+    position: relative;
+    left: -6px;
+    padding-left: 5px;
+    padding-top: 10px;
+    display: block;
+    font-size: 13px;
+    color: #666;
+    text-align: left;
+}
+
+li img {
+    padding: 5px;
+    width: 230px;
+    height: 140px;
+}
+
+.task {
+    margin-top: 35px;
+    color: #666;
+    font-size: 14px;
+}
+
+.task a {
+    color: #666;
+}
+
+.task a span {
+    margin-left: 5px;
+}
+
+.left {
+    float: left;
+    margin-left: 5px;
+}
+
+.right {
+    float: right;
+    margin-right: 10px;
+}

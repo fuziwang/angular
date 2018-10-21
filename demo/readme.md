@@ -38,3 +38,5 @@
 案例一： 百度搜索（基于`jsonp`）
 
 案例二：双向数据绑定
+
++ `edu2act` ：模仿“雪梨教育”，利用 angular 和 express 实现[雪梨平台](http://www.edu2act.net/task/list/)。

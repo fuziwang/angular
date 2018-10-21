@@ -1,0 +1,149 @@
+<div class="index">
+    <div class="main">
+        <div class="left">
+            <div class="proson">
+                <div class="img">
+                    <img src="assets/images/icon/personimg.png" />
+                </div>
+                <div class="name">
+                    2-付子旺
+                </div>
+            </div>
+            <div class="fans">
+                <a><span class="count">7</span><span>粉丝</span></a>
+                <a><span class="count">6</span><span>关注</span></a>
+            </div>
+            <hr>
+            <div class="list">
+                <ul class="li">
+                    <li class="first">
+                        <a [routerLink]="['/home']"><img src="assets/images/icon/task.png" />任务<img src="assets/images/icon/icon.png" class="icon" /></a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/home/team']"><img src="assets/images/icon/tongbuke.png" />同步课<img src="assets/images/icon/icon.png" class="icon" /></a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/home/course']"> <img src="assets/images/icon/course.png" />课程<img src="assets/images/icon/icon.png" class="icon" /></a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/home/commit']"><img src="assets/images/icon/qieshuo.png" />且说<img src="assets/images/icon/icon.png" class="icon" /></a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/home/notice']"> <img src="assets/images/icon/notic.png" />通知<img src="assets/images/icon/icon.png" class="icon" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div class="top">
+                <div class="do">
+                    <li [class.active]="flag1" (click)="change(1)">
+                        <a><img src="assets/images/icon/nodone.png" />未提交</a>
+                    </li>
+                    <li [class.active]="flag2" (click)="change(2)">
+                        <a><img src="assets/images/icon/done.png" />已完成</a>
+                    </li>
+                    <li [class.active]="flag3" (click)="change(3)">
+                        <a><img src="assets/images/icon/end.png" />已完结</a>
+                    </li>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="输入同步课名称搜索">
+                    <button><img src="assets/images/icon/search.png" /></button>
+                </div>
+            </div>
+            <div [ngSwitch]="num">
+                <div *ngSwitchCase="1" class="bottom">
+                    <img src="assets/images/icon/content.png" />
+                    <span>您当前的任务课以全部完成~</span>
+                </div>
+                <div *ngSwitchCase="2" class="task1">
+                    <div class="task">
+                        <h3>任务五 canvas<span>已截止</span><span>待验收</span><span class="score">10分</span></h3>
+                        <div class="nv">
+                            <img src="assets/images/icon/tongbuke.png">
+                            <span>2016级HTML5与CSS3前端开发</span>
+                            <img src="assets/images/icon/icon2.png" class="eye">
+                            <img src="assets/images/icon/eye.png" class="eye">
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3>任务四 angular<span>已截止</span><span>待验收</span><span class="score">10分</span></h3>
+                        <div class="nv">
+                            <img src="assets/images/icon/tongbuke.png">
+                            <span>2016级HTML5与CSS3前端开发</span>
+                            <img src="assets/images/icon/icon2.png" class="eye">
+                            <img src="assets/images/icon/eye.png" class="eye">
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3>任务三 JavaScript<span>已截止</span><span>待验收</span><span class="score">10分</span></h3>
+                        <div class="nv">
+                            <img src="assets/images/icon/tongbuke.png">
+                            <span>2016级HTML5与CSS3前端开发</span>
+                            <img src="assets/images/icon/icon2.png" class="eye">
+                            <img src="assets/images/icon/eye.png" class="eye">
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3>任务二 node.js<span>已截止</span><span>待验收</span><span class="score">10分</span></h3>
+                        <div class="nv">
+                            <img src="assets/images/icon/tongbuke.png">
+                            <span>2016级HTML5与CSS3前端开发</span>
+                            <img src="assets/images/icon/icon2.png" class="eye">
+                            <img src="assets/images/icon/eye.png" class="eye">
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3>任务一 bootstrap<span>已截止</span><span>待验收</span><span class="score">10分</span></h3>
+                        <div class="nv">
+                            <img src="assets/images/icon/tongbuke.png">
+                            <span>2016级HTML5与CSS3前端开发</span>
+                            <img src="assets/images/icon/icon2.png" class="eye">
+                            <img src="assets/images/icon/eye.png" class="eye">
+                        </div>
+                    </div>
+                </div>
+                <div *ngSwitchCase="3" class="task1">
+                    <div class="task">
+                        <h3>任务五 canvas<span>已验收</span><span class="score">10分 / 10分</span></h3>
+                        <div class="nv">
+                            <img src="assets/images/icon/tongbuke.png">
+                            <span>2016级HTML5与CSS3前端开发</span>
+                            <img src="assets/images/icon/icon2.png" class="eye">
+                            <img src="assets/images/icon/eye.png" class="eye">
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3>任务五 canvas<span>已验收</span><span class="score">10分 / 10分</span></h3>
+                        <div class="nv">
+                            <img src="assets/images/icon/tongbuke.png">
+                            <span>2016级HTML5与CSS3前端开发</span>
+                            <img src="assets/images/icon/icon2.png" class="eye">
+                            <img src="assets/images/icon/eye.png" class="eye">
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3>任务五 canvas<span>已验收</span><span class="score">10分 / 10分</span></h3>
+                        <div class="nv">
+                            <img src="assets/images/icon/tongbuke.png">
+                            <span>2016级HTML5与CSS3前端开发</span>
+                            <img src="assets/images/icon/icon2.png" class="eye">
+                            <img src="assets/images/icon/eye.png" class="eye">
+                        </div>
+                    </div>
+                    <div class="task">
+                        <h3>任务五 canvas<span>已验收</span><span class="score">10分 / 10分</span></h3>
+                        <div class="nv">
+                            <img src="assets/images/icon/tongbuke.png">
+                            <span>2016级HTML5与CSS3前端开发</span>
+                            <img src="assets/images/icon/icon2.png" class="eye">
+                            <img src="assets/images/icon/eye.png" class="eye">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <app-footer></app-footer>

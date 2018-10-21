@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="map"></div>
+    <div class="left">
+        <div *ngFor="let i of course" class="course">
+            <div class="set"></div>
+            <img src="{{i.img}}" />
+            <div class="list">
+                <div class="content-top">
+                    <img src="{{i.images}}" />
+                    <div class="content">
+                        <h3><img src="assets/images/icon/work.png"><a [routerLink]="['/community',i.id]">{{i.title}}</a></h3>
+                        <p>{{i.info}}</p>
+                    </div>
+                </div>
+                <div class="content-bottom">
+                    <div class="author">
+                        {{i.author}} · {{i.time}}
+                    </div>
+                    <div class="read">
+                        阅读 {{i.read}} | 评论 {{i.commit}}
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <section>
+            <h4>热门话题</h4>
+            <ul>
+                <li *ngFor="let a of discuss">
+                    <a>{{a.title}}</a><span>{{a.person}}</span>
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
+<app-footer></app-footer>

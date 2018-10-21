@@ -1,0 +1,17 @@
+<div class="container">
+    <ul>
+        <div class="map"></div>
+        <li *ngFor="let i of course">
+            <a [routerLink]="['/team',i.id]">
+                <img src="{{i.images}}" alt="">
+                <h3>{{i.courseName}}</h3>
+                <div class="task">
+                    <a><img src="assets/images/icon/tasklist.png"><span>{{i.task}}</span></a>
+                    <a><img src="assets/images/icon/renwu.png"><span>{{i.person}}</span></a>
+                    <button><span>+</span> 申请</button>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<app-footer></app-footer>

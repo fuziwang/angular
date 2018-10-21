@@ -1,0 +1,110 @@
+.index {
+    margin-top: 48px;
+    width: 100%;
+}
+
+.main {
+    width: 1020px;
+    margin: 0px auto;
+}
+
+.left {
+    position: fixed;
+    float: left;
+    width: 170px;
+}
+
+img {
+    width: 14px;
+    height: 14px;
+}
+
+.img img {
+    width: 170px;
+    height: 170px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.name {
+    font-size: 16px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+}
+
+.fans {
+    height: 49px;
+}
+
+.fans a {
+    display: block;
+    float: left;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.fans .count {
+    display: block;
+    font-size: 1.6em;
+}
+
+hr {
+    border: 0.5px solid #ccc;
+}
+
+.list {
+    margin-top: 15px;
+}
+
+.list li {
+    height: 33px;
+    margin-top: 2px;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.first {
+    background-color: rgb(255, 152, 103);
+    border-radius: 15px;
+}
+
+.list li:hover {
+    background-color: rgb(255, 152, 103);
+    border-radius: 15px;
+}
+
+.list li a {
+    font-size: 16px;
+    line-height: 33px;
+}
+
+.list li a img {
+    float: left;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+
+.list li a .icon {
+    float: right;
+    padding-right: 3px;
+}
+
+.right {
+    margin-top: 40px;
+    margin-left: 20px;
+    float: right;
+    width: 827px;
+}
+
+.right img {
+    width: 796px;
+    height: 506px;
+    margin-left: 20px;
+}
+
+.clear {
+    clear: both;
+}

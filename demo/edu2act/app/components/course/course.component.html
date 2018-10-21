@@ -1,0 +1,16 @@
+<div class="container">
+    <ul>
+        <div class="map"></div>
+        <li *ngFor="let i of course">
+            <a [routerLink]="['/course',i.id]">
+                <img src="{{i.images}}" alt="">
+                <h3>{{i.courseName}}<span>{{i.info}}</span></h3>
+                <div class="task">
+                    <a class="left">课时<span>{{i.task}}</span></a>
+                    <a class="right">人数<span>{{i.person}}</span></a>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<app-footer></app-footer>

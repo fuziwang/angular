@@ -1,0 +1,45 @@
+<header>
+    <div class="header">
+        <div class="logo"><img src="assets/images/logo.png" /></div>
+        <nav>
+            <ul class='nav'>
+                <li><a [routerLink]="['./home']">首页</a></li>
+                <li><a [routerLink]="['./team']">同步课</a></li>
+                <li><a [routerLink]="['./course']">课程</a></li>
+                <li><a [routerLink]="['./community']">社区</a></li>
+                <li class="search">
+                    <input type="text" placeholder="搜索课程、问答">
+                    <button><img src="assets/images/icon/search.png"/></button>
+                </li>
+                <li class="img" [class.active]="flag1" (mouseover)="change(1)" (mouseout)="del()">
+                    <img src="assets/images/icon/notice.png">
+                    <ul>
+                        <li>
+                            <a [routerLink]="['/home/notice']"><img src="assets/images/icon/@.png">我的</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/home/notice']"><img src="assets/images/icon/good.png">收到的赞</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/home/notice']"><img src="assets/images/icon/commit.png">评论</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="img" [class.active1]="flag2" (mouseover)="change(2)" (mouseout)="del()">
+                    <img src="assets/images/icon/image.png">
+                    <ul>
+                        <li>
+                            <a><img src="assets/images/icon/person.png">个人主页</a>
+                        </li>
+                        <li>
+                            <a><img src="assets/images/icon/set.png">设置</a>
+                        </li>
+                        <li>
+                            <a><img src="assets/images/icon/exit.png">退出</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

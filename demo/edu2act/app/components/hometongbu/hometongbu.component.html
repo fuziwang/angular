@@ -1,0 +1,65 @@
+<div class="index">
+    <div class="main">
+        <div class="left">
+            <div class="proson">
+                <div class="img">
+                    <img src="assets/images/icon/personimg.png" />
+                </div>
+                <div class="name">
+                    2-付子旺
+                </div>
+            </div>
+            <div class="fans">
+                <a><span class="count">7</span><span>粉丝</span></a>
+                <a><span class="count">6</span><span>关注</span></a>
+            </div>
+            <hr>
+            <div class="list">
+                <div class="list">
+                    <ul class="li">
+                        <li>
+                            <a [routerLink]="['/home']"><img src="assets/images/icon/task.png" />任务<img src="assets/images/icon/icon.png" class="icon" /></a>
+                        </li>
+                        <li class="first">
+                            <a [routerLink]="['/home/team']"><img src="assets/images/icon/tongbuke.png" />同步课<img src="assets/images/icon/icon.png" class="icon" /></a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/home/course']"> <img src="assets/images/icon/course.png" />课程<img src="assets/images/icon/icon.png" class="icon" /></a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/home/commit']"><img src="assets/images/icon/qieshuo.png" />且说<img src="assets/images/icon/icon.png" class="icon" /></a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/home/notice']"> <img src="assets/images/icon/notic.png" />通知<img src="assets/images/icon/icon.png" class="icon" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="top">
+                <div class="do">
+                    <li>
+                        <a>我加入的</a>
+                    </li>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="输入同步课名称搜索">
+                    <button><img src="assets/images/icon/search.png" /></button>
+                </div>
+            </div>
+            <div class="bottom">
+                <li *ngFor="let i of course">
+                    <div class="one"><img src="{{i.images}}" alt=""></div>
+                    <div class="two">
+                        <h3>{{i.courseName}}</h3>
+                        <a><img src="assets/images/icon/tasklist.png"><span>{{i.task}}</span></a>
+                        <a><img src="assets/images/icon/renwu.png"><span>{{i.person}}</span></a>
+                    </div>
+                    <div class="three">0分</div>
+                </li>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <app-footer></app-footer>
