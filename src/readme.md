@@ -40,3 +40,6 @@
 案例二：双向数据绑定
 
 + `edu2act` ：模仿“雪梨教育”，利用 angular 和 express 实现[雪梨平台](http://www.edu2act.net/task/list/)。
+
+
++ `ionic-reg`：实现“桔家”的注册页面，利用ionic的`input item button`进行实现

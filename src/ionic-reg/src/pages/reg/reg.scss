@@ -1,0 +1,52 @@
+page-reg {
+    ion-content{
+        background: url(../../assets/imgs/bg.png);
+        background-size:cover;
+        ion-item:nth-child(2){
+            height: 70px;
+        }
+        ion-item{
+            background-color: transparent !important;
+            ion-label img{
+                width: 31px;
+                height: 44px;
+                position: relative;
+                top:1px;
+            }
+            button{
+                height: 55px !important;
+                background-color: #b3bfbd !important;
+                padding:5px;
+                font-size:14px;
+                line-height: 55px;
+                text-align: center;
+                position: relative;
+                top:-30px;
+                color:#333 !important;
+            }
+            ion-input{
+                border-bottom:0.5px solid #f2f5f5 !important;
+                margin-left:5px;
+                color:#dbded7 !important;
+                button{
+                    position: relative;
+                    right:0px;
+                }
+            }
+            input::-webkit-input-placeholder {
+                font-size:14px;
+              color: #dbded7 !important;
+            }
+        }
+        button{
+            margin-top:50px !important;
+            color:#fff !important;
+        }
+        p{
+            text-align: center;
+            a {
+              color: #fff;
+            }
+        }
+    }
+}
