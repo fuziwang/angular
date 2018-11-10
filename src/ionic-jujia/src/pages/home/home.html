@@ -1,0 +1,133 @@
+<ion-header no-border>
+    <ion-navbar color="yellow">
+        <button ion-button icon-only menuToggle>
+            <ion-icon></ion-icon>
+        </button>
+        <ion-title>
+            <img src="../../assets/imgs/logo.png">
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only>
+                <ion-icon name="search"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <nav>
+        <ul [ngSwitch]="id">
+            <li [class.nav_first]="flag1" (click)="change(1)">推荐</li>
+            <li [class.nav_first]="flag2" (click)="change(2)">家居</li>
+            <li>餐厨</li>
+            <li>床上用品</li>
+        </ul>
+    </nav>
+    <div [ngSwitch]="num">
+        <div *ngSwitchCase="1">
+            <ion-slides autoplay="300" class="sli" loop="true" pager="true">
+                <ion-slide>
+                    <img src="../../assets/imgs/banner1.png">
+                </ion-slide>
+                <ion-slide>
+                    <img src="../../assets/imgs/banner1.png">
+                </ion-slide>
+                <ion-slide>
+                    <img src="../../assets/imgs/banner1.png">
+                </ion-slide>
+            </ion-slides>
+            <div class="hot">
+                <h3>热 | 门 | 推 | 荐</h3>
+                <p>RECONMMENDATION</p>
+            </div>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-6>
+                    <img src="../../assets/imgs/hot01.png" alt="">
+                    <p>--北欧原木色置物架--</p>
+                    </ion-col>
+                    <ion-col col-6>
+                    <img src="../../assets/imgs/hot02.png" alt="">
+                    <p>--简约黑檀木茶几--</p>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-6>
+                    <img src="../../assets/imgs/hot03.png" alt="">
+                    <p>--北欧白橡木书架--</p>
+                    </ion-col>
+                    <ion-col col-6>
+                    <img src="../../assets/imgs/hot04.png" alt="">
+                    <p>--北欧风餐边柜--</p>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-6>
+                    <img src="../../assets/imgs/hot05.png" alt="">
+                    <p>--北欧原木色置物架--</p>
+                    </ion-col>
+                    <ion-col col-6>
+                    <img src="../../assets/imgs/hot06.png" alt="">
+                    <p>--北欧原木色置物架--</p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+        <div *ngSwitchCase="2">
+            <ion-slides autoplay="300" class="sli" loop="true" pager="true">
+                <ion-slide>
+                    <img src="../../assets/imgs/banner2.png">
+                </ion-slide>
+                <ion-slide>
+                    <img src="../../assets/imgs/banner2.png">
+                </ion-slide>
+                <ion-slide>
+                    <img src="../../assets/imgs/banner2.png">
+                </ion-slide>
+            </ion-slides>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-4>
+                        <img src="../../assets/imgs/home_ting.png" alt="">
+                        <p class="home">客厅</p>
+                    </ion-col>
+                    <ion-col col-4>
+                        <img src="../../assets/imgs/home_book.png" alt="">
+                        <p class="home">书房</p>
+                    </ion-col>
+                    <ion-col col-4>
+                        <img src="../../assets/imgs/home_door.png" alt="">
+                        <p class="home">门厅</p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <div class="hot">
+                <h3>桔 | 子 | 家 | 居</h3>
+                <p>Orange household</p>
+            </div>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-6>
+                        <img src="../../assets/imgs/home01.png" alt="">
+                        <p>-欧式全实木花几-<span>RMB 600</span></p>
+                    </ion-col>
+                    <ion-col col-6>
+                        <img src="../../assets/imgs/home02.png" alt="">
+                        <p>-现代简约早餐桌-<span>RMB 450</span></p>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-6>
+                        <img src="../../assets/imgs/home01.png" alt="">
+                        <p>-欧式全实木花几-<span>RMB 600</span></p>
+                    </ion-col>
+                    <ion-col col-6>
+                        <img src="../../assets/imgs/home02.png" alt="">
+                        <p>-现代简约早餐桌-<span>RMB 450</span></p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
+    
+</ion-content>
