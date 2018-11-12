@@ -27,9 +27,18 @@ li {
 .tabs-ios .tab-button[aria-selected=true] .tab-button-icon {
   color: #ffdb2c;
 }
+.tabs-md .tab-button:hover:not(.disable-hover),
+.tabs-md .tab-button[aria-selected=true],
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon{
+  color: #ffdb2c;
+}
 .ion-ios-add-circle,
 .ion-ios-add-circle-outline {
   height: 40px !important;
+}
+.ion-md-add-circle:before,
+.ion-md-add-circle-outline:before{
+  color: #ffdb2c;
 }
 
 .ion-ios-add-circle:before,
